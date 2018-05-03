@@ -11,9 +11,10 @@ using System;
 namespace ChatApp.Migrations
 {
     [DbContext(typeof(BerichtContext))]
-    partial class BerichtContextModelSnapshot : ModelSnapshot
+    [Migration("20180503182717_hopereturned")]
+    partial class hopereturned
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -27,7 +28,7 @@ namespace ChatApp.Migrations
 
                     b.Property<string>("Content");
 
-                    b.Property<DateTime>("_Datum");
+                    b.Property<DateTime>("Datum");
 
                     b.HasKey("ID");
 

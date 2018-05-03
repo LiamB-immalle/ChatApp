@@ -9,6 +9,17 @@ namespace ChatApp.Models
     {
         public int ID { get; set; }
         public string Content { get; set; }
-        public DateTime Datum { get; set; }
+        public DateTime Datum = DateTime.Now;
+        public DateTime _Datum
+        {
+            get
+            {
+                return (Datum == DateTime.MinValue) ? DateTime.Now : Datum;
+            }
+            set
+            {
+                Datum = value;
+            }
+        }
     }
 }
