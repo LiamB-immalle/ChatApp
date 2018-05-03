@@ -64,7 +64,7 @@ namespace ChatApp
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Berichten}/{action=Index}/{id?}");
             });
         }
     }
